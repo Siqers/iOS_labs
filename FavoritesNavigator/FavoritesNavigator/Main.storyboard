@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24520" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav">
+    <device id="retina6_12" orientation="portrait" appearance="light" />
+    <dependencies>
+        <deployment identifier="iOS" />
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24516" />
+    </dependencies>
+    <scenes>
+        <scene sceneID="lab-000-id">
+            <objects>
+                <navigationController id="nav" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" translucent="NO" prefersLargeTitles="YES" contentMode="scaleToFill" id="lab-002-id">
+                        <rect key="frame" x="0" y="59" width="393" height="44" />
+                    </navigationBar>
+                    <connections>
+                        <segue destination="main" kind="relationship" relationship="rootViewController" id="lab-003-id" />
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lab-001-id" sceneMemberID="firstResponder" />
+            </objects>
+        </scene>
+        <scene sceneID="lab-004-id">
+            <objects>
+                <viewController id="main" sceneMemberID="viewController" customClass="FavoritesViewController" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="lab-006-id">
+                        <rect key="frame" x="0" y="0" width="393" height="852" />
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentInsetAdjustmentBehavior="never" id="lab-008-id" dataMode="prototypes" style="plain" rowHeight="104" estimatedRowHeight="104" allowsSelection="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0" y="103" width="393" height="700" />
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" />
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" id="lab-013-id" reuseIdentifier="FavoriteCell" customClass="FavoriteCell" customModuleProvider="target" selectionStyle="default">
+                                        <rect key="frame" x="0" y="0" width="393" height="104" />
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" id="lab-014-id" tableViewCell="lab-013-id">
+                                            <rect key="frame" x="0" y="0" width="393" height="104" />
+                                            <subviews>
+                                                <imageView id="lab-020-id" contentMode="scaleAspectFill" clipsSubviews="YES" userInteractionEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="16" y="14" width="76" height="76" />
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="76" id="lab-021-id" />
+                                                        <constraint firstAttribute="width" constant="76" id="lab-022-id" />
+                                                    </constraints>
+                                                </imageView>
+                                                <label id="lab-024-id" text="Trail name" textAlignment="natural" numberOfLines="0" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="106" y="41" width="271" height="22" />
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18" weight="semibold" />
+                                                    <color key="textColor" systemColor="labelColor" />
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lab-020-id" firstAttribute="leading" secondItem="lab-014-id" secondAttribute="leading" constant="16" id="lab-016-id" />
+                                                <constraint firstItem="lab-020-id" firstAttribute="centerY" secondItem="lab-014-id" secondAttribute="centerY" id="lab-017-id" />
+                                                <constraint firstItem="lab-024-id" firstAttribute="leading" secondItem="lab-020-id" secondAttribute="trailing" constant="14" id="lab-018-id" />
+                                                <constraint firstItem="lab-024-id" firstAttribute="trailing" secondItem="lab-014-id" secondAttribute="trailing" constant="-16" id="lab-019-id" />
+                                                <constraint firstItem="lab-024-id" firstAttribute="centerY" secondItem="lab-014-id" secondAttribute="centerY" id="lab-023-id" />
+                                                <constraint firstItem="lab-024-id" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lab-014-id" secondAttribute="top" constant="12" id="lab-025-id" />
+                                                <constraint firstItem="lab-024-id" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="lab-014-id" secondAttribute="bottom" constant="-12" id="lab-073-id" />
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artwork" destination="lab-020-id" id="lab-026-id" />
+                                            <outlet property="titleLabel" destination="lab-024-id" id="lab-027-id" />
+                                            <segue destination="detail" kind="show" identifier="showDetail" id="lab-028-id" />
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="main" id="lab-029-id" />
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lab-006-id-safe" />
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" />
+                        <constraints>
+                            <constraint firstItem="lab-008-id" firstAttribute="leading" id="lab-009-id" secondItem="lab-006-id-safe" secondAttribute="leading" />
+                            <constraint firstItem="lab-008-id" firstAttribute="trailing" id="lab-010-id" secondItem="lab-006-id-safe" secondAttribute="trailing" />
+                            <constraint firstItem="lab-008-id" firstAttribute="top" id="lab-011-id" secondItem="lab-006-id-safe" secondAttribute="top" />
+                            <constraint firstItem="lab-008-id" firstAttribute="bottom" id="lab-012-id" secondItem="lab-006-id-safe" secondAttribute="bottom" />
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trail Atlas" largeTitleDisplayMode="always" id="lab-007-id" />
+                    <connections>
+                        <outlet property="tableView" destination="lab-008-id" id="lab-030-id" />
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lab-005-id" sceneMemberID="firstResponder" />
+            </objects>
+        </scene>
+        <scene sceneID="lab-031-id">
+            <objects>
+                <viewController id="detail" sceneMemberID="viewController" customClass="DetailViewController" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="lab-033-id">
+                        <rect key="frame" x="0" y="0" width="393" height="852" />
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
+                        <subviews>
+                            <scrollView id="lab-035-id" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0" y="103" width="393" height="715" />
+                                <subviews>
+                                    <stackView id="lab-042-id" axis="vertical" spacing="10" alignment="leading" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="16" y="16" width="361" height="430" />
+                                        <subviews>
+                                            <imageView id="lab-048-id" contentMode="scaleAspectFill" clipsSubviews="YES" userInteractionEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO">
+                                                <rect key="frame" x="0" y="0" width="361" height="241" />
+                                                <constraints>
+                                                    <constraint firstItem="lab-048-id" firstAttribute="height" id="lab-050-id" secondItem="lab-048-id" secondAttribute="width" multiplier="2:3" />
+                                                </constraints>
+                                            </imageView>
+                                            <label id="lab-051-id" text="Trail name" textAlignment="natural" numberOfLines="0" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                                <rect key="frame" x="0" y="251" width="361" height="40" />
+                                                <color key="textColor" systemColor="labelColor" />
+                                                <fontDescription key="fontDescription" type="system" pointSize="29" weight="bold" />
+                                            </label>
+                                            <label id="lab-052-id" text="Country" textAlignment="natural" numberOfLines="0" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                                <rect key="frame" x="0" y="301" width="361" height="25" />
+                                                <color key="textColor" systemColor="secondaryLabelColor" />
+                                                <fontDescription key="fontDescription" type="system" pointSize="17" weight="regular" />
+                                            </label>
+                                            <stackView id="lab-053-id" axis="horizontal" spacing="4" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO">
+                                                <rect key="frame" x="0" y="336" width="96" height="18" />
+                                                <subviews>
+                                                    <imageView id="lab-054-id" contentMode="scaleAspectFit" clipsSubviews="YES" userInteractionEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" image="star" catalog="system">
+                                                        <rect key="frame" x="0" y="0" width="16" height="16" />
+                                                        <color key="tintColor" red="0.6627450980392157" green="0.40784313725490196" blue="0.07450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                                    </imageView>
+                                                    <imageView id="lab-055-id" contentMode="scaleAspectFit" clipsSubviews="YES" userInteractionEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" image="star" catalog="system">
+                                                        <rect key="frame" x="20" y="0" width="16" height="16" />
+                                                        <color key="tintColor" red="0.6627450980392157" green="0.40784313725490196" blue="0.07450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                                    </imageView>
+                                                    <imageView id="lab-056-id" contentMode="scaleAspectFit" clipsSubviews="YES" userInteractionEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" image="star" catalog="system">
+                                                        <rect key="frame" x="40" y="0" width="16" height="16" />
+                                                        <color key="tintColor" red="0.6627450980392157" green="0.40784313725490196" blue="0.07450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                                    </imageView>
+                                                    <imageView id="lab-057-id" contentMode="scaleAspectFit" clipsSubviews="YES" userInteractionEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" image="star" catalog="system">
+                                                        <rect key="frame" x="60" y="0" width="16" height="16" />
+                                                        <color key="tintColor" red="0.6627450980392157" green="0.40784313725490196" blue="0.07450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                                    </imageView>
+                                                    <imageView id="lab-058-id" contentMode="scaleAspectFit" clipsSubviews="YES" userInteractionEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" image="star" catalog="system">
+                                                        <rect key="frame" x="80" y="0" width="16" height="16" />
+                                                        <color key="tintColor" red="0.6627450980392157" green="0.40784313725490196" blue="0.07450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" id="lab-059-id" constant="96" />
+                                                    <constraint firstAttribute="height" id="lab-060-id" constant="18" />
+                                                </constraints>
+                                            </stackView>
+                                            <label id="lab-061-id" text="Trail description" textAlignment="natural" numberOfLines="0" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                                <rect key="frame" x="0" y="364" width="361" height="60" />
+                                                <color key="textColor" systemColor="labelColor" />
+                                                <fontDescription key="fontDescription" type="system" pointSize="17" weight="regular" />
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="lab-048-id" firstAttribute="width" id="lab-049-id" secondItem="lab-042-id" secondAttribute="width" />
+                                            <constraint firstItem="lab-051-id" firstAttribute="width" id="lab-062-id" secondItem="lab-042-id" secondAttribute="width" />
+                                            <constraint firstItem="lab-052-id" firstAttribute="width" id="lab-063-id" secondItem="lab-042-id" secondAttribute="width" />
+                                            <constraint firstItem="lab-061-id" firstAttribute="width" id="lab-064-id" secondItem="lab-042-id" secondAttribute="width" />
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="lab-040-id" />
+                                <viewLayoutGuide key="frameLayoutGuide" id="lab-041-id" />
+                                <constraints>
+                                    <constraint firstItem="lab-042-id" firstAttribute="leading" id="lab-043-id" secondItem="lab-040-id" secondAttribute="leading" constant="16" />
+                                    <constraint firstItem="lab-042-id" firstAttribute="trailing" id="lab-044-id" secondItem="lab-040-id" secondAttribute="trailing" constant="-16" />
+                                    <constraint firstItem="lab-042-id" firstAttribute="top" id="lab-045-id" secondItem="lab-040-id" secondAttribute="top" constant="16" />
+                                    <constraint firstItem="lab-042-id" firstAttribute="bottom" id="lab-046-id" secondItem="lab-040-id" secondAttribute="bottom" constant="-20" />
+                                    <constraint firstItem="lab-042-id" firstAttribute="width" id="lab-047-id" secondItem="lab-041-id" secondAttribute="width" constant="-32" />
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lab-033-id-safe" />
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" />
+                        <constraints>
+                            <constraint firstItem="lab-035-id" firstAttribute="top" id="lab-036-id" secondItem="lab-033-id-safe" secondAttribute="top" />
+                            <constraint firstItem="lab-035-id" firstAttribute="leading" id="lab-037-id" secondItem="lab-033-id-safe" secondAttribute="leading" />
+                            <constraint firstItem="lab-035-id" firstAttribute="trailing" id="lab-038-id" secondItem="lab-033-id-safe" secondAttribute="trailing" />
+                            <constraint firstItem="lab-035-id" firstAttribute="bottom" id="lab-039-id" secondItem="lab-033-id-safe" secondAttribute="bottom" />
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="lab-034-id" />
+                    <connections>
+                        <outlet property="artwork" destination="lab-048-id" id="lab-065-id" />
+                        <outlet property="titleLabel" destination="lab-051-id" id="lab-066-id" />
+                        <outlet property="subtitleLabel" destination="lab-052-id" id="lab-067-id" />
+                        <outlet property="ratingView" destination="lab-053-id" id="lab-068-id" />
+                        <outlet property="descriptionLabel" destination="lab-061-id" id="lab-069-id" />
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lab-032-id" sceneMemberID="firstResponder" />
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" catalog="system" width="128" height="128" />
+        <systemColor name="systemBackgroundColor">
+            <color red="1.0" green="1.0" blue="1.0" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.9490196078431372" green="0.9490196078431372" blue="0.9686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+    </resources>
+</document>
