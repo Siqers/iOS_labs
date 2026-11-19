@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="main">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites View Controller-->
+        <scene sceneID="lab-000-id">
+            <objects>
+                <viewController id="main" customClass="FavoritesViewController" customModule="FavoritesList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lab-002-id">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label contentMode="scaleToFill" text="Trail Atlas" textAlignment="natural" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lab-003-id">
+                                <rect key="frame" x="16" y="128" width="361" height="39.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <tableView contentMode="scaleToFill" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="104" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lab-007-id">
+                                <rect key="frame" x="0.0" y="175.66666666666669" width="393" height="608.33333333333326"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FavoriteCell" id="lab-012-id" customClass="FavoriteCell" customModule="FavoritesList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="101"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" contentMode="scaleToFill" tableViewCell="lab-012-id" id="lab-013-id">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="101"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <stackView contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="lab-014-id">
+                                                    <rect key="frame" x="16" y="12" width="361" height="77"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="lab-019-id">
+                                                            <rect key="frame" x="0.0" y="0.6666666666666643" width="76" height="76"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="76" id="lab-020-id"/>
+                                                                <constraint firstAttribute="width" constant="76" id="lab-021-id"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lab-022-id">
+                                                            <rect key="frame" x="90" y="5.6666666666666643" width="271" height="65.666666666666686"/>
+                                                            <subviews>
+                                                                <label contentMode="scaleToFill" text="Trail name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="lab-023-id">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="271" height="21.666666666666668"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </label>
+                                                                <label contentMode="scaleToFill" text="Country" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="lab-025-id">
+                                                                    <rect key="frame" x="0.0" y="25.666666666666671" width="271" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </label>
+                                                                <stackView contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lab-027-id">
+                                                                    <rect key="frame" x="0.0" y="47.666666666666657" width="96" height="18"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lab-028-id">
+                                                                            <rect key="frame" x="0.0" y="-0.33333333333333215" width="16" height="17.666666666666664"/>
+                                                                            <color key="tintColor" red="0.66274509803921566" green="0.40784313725490196" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lab-029-id">
+                                                                            <rect key="frame" x="20" y="-0.33333333333333215" width="16" height="17.666666666666664"/>
+                                                                            <color key="tintColor" red="0.66274509803921566" green="0.40784313725490196" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lab-030-id">
+                                                                            <rect key="frame" x="40" y="-0.33333333333333215" width="16" height="17.666666666666664"/>
+                                                                            <color key="tintColor" red="0.66274509803921566" green="0.40784313725490196" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lab-031-id">
+                                                                            <rect key="frame" x="60" y="-0.33333333333333215" width="16" height="17.666666666666664"/>
+                                                                            <color key="tintColor" red="0.66274509803921566" green="0.40784313725490196" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lab-032-id">
+                                                                            <rect key="frame" x="80" y="-0.33333333333333215" width="16" height="17.666666666666664"/>
+                                                                            <color key="tintColor" red="0.66274509803921566" green="0.40784313725490196" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="96" id="lab-033-id"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="lab-034-id"/>
+                                                                    </constraints>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="lab-023-id" firstAttribute="width" secondItem="lab-022-id" secondAttribute="width" id="lab-024-id"/>
+                                                                <constraint firstItem="lab-025-id" firstAttribute="width" secondItem="lab-022-id" secondAttribute="width" id="lab-026-id"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lab-014-id" firstAttribute="leading" secondItem="lab-013-id" secondAttribute="leading" constant="16" id="lab-015-id"/>
+                                                <constraint firstItem="lab-014-id" firstAttribute="trailing" secondItem="lab-013-id" secondAttribute="trailing" constant="-16" id="lab-016-id"/>
+                                                <constraint firstItem="lab-014-id" firstAttribute="top" secondItem="lab-013-id" secondAttribute="top" constant="12" id="lab-017-id"/>
+                                                <constraint firstItem="lab-014-id" firstAttribute="bottom" secondItem="lab-013-id" secondAttribute="bottom" constant="-12" id="lab-018-id"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artwork" destination="lab-019-id" id="lab-035-id"/>
+                                            <outlet property="ratingView" destination="lab-027-id" id="lab-038-id"/>
+                                            <outlet property="subtitleLabel" destination="lab-025-id" id="lab-037-id"/>
+                                            <outlet property="titleLabel" destination="lab-023-id" id="lab-036-id"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="main" id="lab-039-id"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lab-002-id-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lab-003-id" firstAttribute="leading" secondItem="lab-002-id-safe" secondAttribute="leading" constant="16" id="lab-004-id"/>
+                            <constraint firstItem="lab-003-id" firstAttribute="trailing" secondItem="lab-002-id-safe" secondAttribute="trailing" constant="-16" id="lab-005-id"/>
+                            <constraint firstItem="lab-003-id" firstAttribute="top" secondItem="lab-002-id-safe" secondAttribute="top" constant="10" id="lab-006-id"/>
+                            <constraint firstItem="lab-007-id" firstAttribute="leading" secondItem="lab-002-id-safe" secondAttribute="leading" id="lab-008-id"/>
+                            <constraint firstItem="lab-007-id" firstAttribute="trailing" secondItem="lab-002-id-safe" secondAttribute="trailing" id="lab-009-id"/>
+                            <constraint firstItem="lab-007-id" firstAttribute="top" secondItem="lab-003-id" secondAttribute="bottom" constant="8" id="lab-010-id"/>
+                            <constraint firstItem="lab-007-id" firstAttribute="bottom" secondItem="lab-002-id-safe" secondAttribute="bottom" id="lab-011-id"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="lab-007-id" id="lab-040-id"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lab-001-id" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-7"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
