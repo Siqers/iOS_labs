@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24520" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="NO" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="main">
+    <device id="retina6_12" orientation="portrait" appearance="light" />
+    <dependencies>
+        <deployment identifier="iOS" />
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24516" />
+    </dependencies>
+    <scenes>
+        <scene sceneID="lab-000-id">
+            <objects>
+                <viewController id="main" sceneMemberID="viewController" customClass="RouletteViewController" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="lab-002-id">
+                        <rect key="frame" x="0" y="0" width="393" height="852" />
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
+                        <subviews>
+                            <view id="lab-003-id">
+                                <rect key="frame" x="24" y="161" width="345" height="530" />
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES" />
+                                <subviews>
+                                    <label id="lab-004-id" text="Peak Roulette" textAlignment="center" numberOfLines="1" lineBreakMode="wordWrap">
+                                        <rect key="frame" x="0" y="0" width="345" height="38" />
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES" />
+                                        <color key="textColor" systemColor="labelColor" />
+                                        <fontDescription key="fontDescription" type="system" pointSize="31" weight="bold" />
+                                    </label>
+                                    <imageView id="lab-005-id" contentMode="scaleAspectFit" clipsSubviews="YES" userInteractionEnabled="NO" image="Trail01">
+                                        <rect key="frame" x="0" y="50" width="345" height="230" />
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES" />
+                                    </imageView>
+                                    <label id="lab-006-id" text="Ala-Archa Gorge" textAlignment="center" numberOfLines="2" lineBreakMode="wordWrap">
+                                        <rect key="frame" x="0" y="294" width="345" height="58" />
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES" />
+                                        <color key="textColor" systemColor="labelColor" />
+                                        <fontDescription key="fontDescription" type="system" pointSize="23" weight="semibold" />
+                                    </label>
+                                    <label id="lab-007-id" text="The trail follows the river into the gorge. Spruce trees shade the early stretch. The peaks come into view as the valley opens." textAlignment="center" numberOfLines="0" lineBreakMode="wordWrap">
+                                        <rect key="frame" x="0" y="358" width="345" height="106" />
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES" />
+                                        <color key="textColor" systemColor="secondaryLabelColor" />
+                                        <fontDescription key="fontDescription" type="system" pointSize="17" weight="regular" />
+                                    </label>
+                                    <button id="lab-008-id" buttonType="system">
+                                        <rect key="frame" x="0" y="482" width="345" height="48" />
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES" />
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="medium" title="Show another trail">
+                                            <color key="baseBackgroundColor" red="0.1411764705882353" green="0.36470588235294116" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="spin:" destination="main" eventType="touchUpInside" id="lab-012-id" />
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lab-002-id-safe" />
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" />
+                    </view>
+                    <connections>
+                        <outlet property="artwork" destination="lab-005-id" id="lab-009-id" />
+                        <outlet property="titleLabel" destination="lab-006-id" id="lab-010-id" />
+                        <outlet property="descriptionLabel" destination="lab-007-id" id="lab-011-id" />
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lab-001-id" sceneMemberID="firstResponder" />
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Trail01" width="640" height="640" />
+        <systemColor name="systemBackgroundColor">
+            <color red="1.0" green="1.0" blue="1.0" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.9490196078431372" green="0.9490196078431372" blue="0.9686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+    </resources>
+</document>

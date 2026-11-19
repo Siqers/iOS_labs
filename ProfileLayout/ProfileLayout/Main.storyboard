@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24520" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="main">
+    <device id="retina6_12" orientation="portrait" appearance="light" />
+    <dependencies>
+        <deployment identifier="iOS" />
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24516" />
+    </dependencies>
+    <scenes>
+        <scene sceneID="lab-000-id">
+            <objects>
+                <viewController id="main" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lab-002-id">
+                        <rect key="frame" x="0" y="0" width="393" height="852" />
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
+                        <subviews>
+                            <imageView id="lab-003-id" contentMode="scaleAspectFit" clipsSubviews="YES" userInteractionEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" image="Avatar">
+                                <rect key="frame" x="148" y="83" width="96" height="96" />
+                                <constraints>
+                                    <constraint firstAttribute="width" id="lab-006-id" constant="96" />
+                                    <constraint firstAttribute="height" id="lab-007-id" constant="96" />
+                                </constraints>
+                            </imageView>
+                            <label id="lab-008-id" text="Maximilian Alexander von Habsburg" textAlignment="center" numberOfLines="2" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="191" width="361" height="72" />
+                                <color key="textColor" systemColor="labelColor" />
+                                <fontDescription key="fontDescription" type="system" pointSize="29" weight="bold" />
+                            </label>
+                            <label id="lab-012-id" text="128" textAlignment="center" numberOfLines="1" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="283" width="120" height="25" />
+                                <color key="textColor" systemColor="labelColor" />
+                                <fontDescription key="fontDescription" type="system" pointSize="21" weight="semibold" />
+                            </label>
+                            <label id="lab-013-id" text="Posts" textAlignment="center" numberOfLines="1" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="312" width="120" height="20" />
+                                <color key="textColor" systemColor="secondaryLabelColor" />
+                                <fontDescription key="fontDescription" type="system" pointSize="15" weight="regular" />
+                            </label>
+                            <label id="lab-019-id" text="2,480" textAlignment="center" numberOfLines="1" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="136" y="283" width="120" height="25" />
+                                <color key="textColor" systemColor="labelColor" />
+                                <fontDescription key="fontDescription" type="system" pointSize="21" weight="semibold" />
+                            </label>
+                            <label id="lab-020-id" text="Followers" textAlignment="center" numberOfLines="1" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="136" y="312" width="120" height="20" />
+                                <color key="textColor" systemColor="secondaryLabelColor" />
+                                <fontDescription key="fontDescription" type="system" pointSize="15" weight="regular" />
+                            </label>
+                            <view id="lab-027-id" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="136" y="286" width="1" height="42" />
+                                <color key="backgroundColor" systemColor="separatorColor" />
+                                <constraints>
+                                    <constraint firstAttribute="width" id="lab-030-id" constant="1" />
+                                    <constraint firstAttribute="height" id="lab-031-id" constant="42" />
+                                </constraints>
+                            </view>
+                            <label id="lab-032-id" text="312" textAlignment="center" numberOfLines="1" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="256" y="283" width="120" height="25" />
+                                <color key="textColor" systemColor="labelColor" />
+                                <fontDescription key="fontDescription" type="system" pointSize="21" weight="semibold" />
+                            </label>
+                            <label id="lab-033-id" text="Following" textAlignment="center" numberOfLines="1" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="256" y="312" width="120" height="20" />
+                                <color key="textColor" systemColor="secondaryLabelColor" />
+                                <fontDescription key="fontDescription" type="system" pointSize="15" weight="regular" />
+                            </label>
+                            <view id="lab-040-id" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="256" y="286" width="1" height="42" />
+                                <color key="backgroundColor" systemColor="separatorColor" />
+                                <constraints>
+                                    <constraint firstAttribute="width" id="lab-043-id" constant="1" />
+                                    <constraint firstAttribute="height" id="lab-044-id" constant="42" />
+                                </constraints>
+                            </view>
+                            <button id="lab-046-id" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="352" width="174" height="48" />
+                                <constraints>
+                                    <constraint firstAttribute="height" id="lab-049-id" constant="48" />
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="medium" title="Follow">
+                                    <color key="baseBackgroundColor" red="0.1411764705882353" green="0.36470588235294116" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                </buttonConfiguration>
+                            </button>
+                            <button id="lab-047-id" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="202" y="352" width="175" height="48" />
+                                <constraints>
+                                    <constraint firstAttribute="height" id="lab-051-id" constant="48" />
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="gray" cornerStyle="medium" title="Message">
+                                    <color key="baseForegroundColor" red="0.1411764705882353" green="0.36470588235294116" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                </buttonConfiguration>
+                            </button>
+                            <label id="lab-056-id" text="About" textAlignment="natural" numberOfLines="1" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="424" width="361" height="24" />
+                                <color key="textColor" systemColor="labelColor" />
+                                <fontDescription key="fontDescription" type="system" pointSize="20" weight="semibold" />
+                            </label>
+                            <label id="lab-057-id" text="Weekend hiker and film photographer. I like slow mornings, long walks, and finding small cafés after a day in the mountains." textAlignment="natural" numberOfLines="0" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="456" width="361" height="90" />
+                                <color key="textColor" systemColor="secondaryLabelColor" />
+                                <fontDescription key="fontDescription" type="system" pointSize="17" weight="regular" />
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lab-002-id-safe" />
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" />
+                        <constraints>
+                            <constraint firstItem="lab-003-id" firstAttribute="centerX" id="lab-004-id" secondItem="lab-002-id-safe" secondAttribute="centerX" />
+                            <constraint firstItem="lab-003-id" firstAttribute="top" id="lab-005-id" secondItem="lab-002-id-safe" secondAttribute="top" constant="24" />
+                            <constraint firstItem="lab-008-id" firstAttribute="leading" id="lab-009-id" secondItem="lab-002-id-safe" secondAttribute="leading" constant="16" />
+                            <constraint firstItem="lab-008-id" firstAttribute="trailing" id="lab-010-id" secondItem="lab-002-id-safe" secondAttribute="trailing" constant="-16" />
+                            <constraint firstItem="lab-008-id" firstAttribute="top" id="lab-011-id" secondItem="lab-003-id" secondAttribute="bottom" constant="12" />
+                            <constraint firstItem="lab-012-id" firstAttribute="top" id="lab-014-id" secondItem="lab-008-id" secondAttribute="bottom" constant="20" />
+                            <constraint firstItem="lab-013-id" firstAttribute="top" id="lab-015-id" secondItem="lab-012-id" secondAttribute="bottom" constant="4" />
+                            <constraint firstItem="lab-013-id" firstAttribute="leading" id="lab-016-id" secondItem="lab-012-id" secondAttribute="leading" />
+                            <constraint firstItem="lab-013-id" firstAttribute="trailing" id="lab-017-id" secondItem="lab-012-id" secondAttribute="trailing" />
+                            <constraint firstItem="lab-012-id" firstAttribute="leading" id="lab-018-id" secondItem="lab-002-id-safe" secondAttribute="leading" constant="16" />
+                            <constraint firstItem="lab-019-id" firstAttribute="top" id="lab-021-id" secondItem="lab-008-id" secondAttribute="bottom" constant="20" />
+                            <constraint firstItem="lab-020-id" firstAttribute="top" id="lab-022-id" secondItem="lab-019-id" secondAttribute="bottom" constant="4" />
+                            <constraint firstItem="lab-020-id" firstAttribute="leading" id="lab-023-id" secondItem="lab-019-id" secondAttribute="leading" />
+                            <constraint firstItem="lab-020-id" firstAttribute="trailing" id="lab-024-id" secondItem="lab-019-id" secondAttribute="trailing" />
+                            <constraint firstItem="lab-019-id" firstAttribute="leading" id="lab-025-id" secondItem="lab-012-id" secondAttribute="trailing" />
+                            <constraint firstItem="lab-019-id" firstAttribute="width" id="lab-026-id" secondItem="lab-012-id" secondAttribute="width" />
+                            <constraint firstItem="lab-027-id" firstAttribute="centerX" id="lab-028-id" secondItem="lab-019-id" secondAttribute="leading" />
+                            <constraint firstItem="lab-027-id" firstAttribute="centerY" id="lab-029-id" secondItem="lab-019-id" secondAttribute="bottom" constant="2" />
+                            <constraint firstItem="lab-032-id" firstAttribute="top" id="lab-034-id" secondItem="lab-008-id" secondAttribute="bottom" constant="20" />
+                            <constraint firstItem="lab-033-id" firstAttribute="top" id="lab-035-id" secondItem="lab-032-id" secondAttribute="bottom" constant="4" />
+                            <constraint firstItem="lab-033-id" firstAttribute="leading" id="lab-036-id" secondItem="lab-032-id" secondAttribute="leading" />
+                            <constraint firstItem="lab-033-id" firstAttribute="trailing" id="lab-037-id" secondItem="lab-032-id" secondAttribute="trailing" />
+                            <constraint firstItem="lab-032-id" firstAttribute="leading" id="lab-038-id" secondItem="lab-019-id" secondAttribute="trailing" />
+                            <constraint firstItem="lab-032-id" firstAttribute="width" id="lab-039-id" secondItem="lab-012-id" secondAttribute="width" />
+                            <constraint firstItem="lab-040-id" firstAttribute="centerX" id="lab-041-id" secondItem="lab-032-id" secondAttribute="leading" />
+                            <constraint firstItem="lab-040-id" firstAttribute="centerY" id="lab-042-id" secondItem="lab-032-id" secondAttribute="bottom" constant="2" />
+                            <constraint firstItem="lab-032-id" firstAttribute="trailing" id="lab-045-id" secondItem="lab-002-id-safe" secondAttribute="trailing" constant="-16" />
+                            <constraint firstItem="lab-046-id" firstAttribute="top" id="lab-048-id" secondItem="lab-013-id" secondAttribute="bottom" constant="20" />
+                            <constraint firstItem="lab-047-id" firstAttribute="top" id="lab-050-id" secondItem="lab-013-id" secondAttribute="bottom" constant="20" />
+                            <constraint firstItem="lab-046-id" firstAttribute="leading" id="lab-052-id" secondItem="lab-002-id-safe" secondAttribute="leading" constant="16" />
+                            <constraint firstItem="lab-047-id" firstAttribute="leading" id="lab-053-id" secondItem="lab-046-id" secondAttribute="trailing" constant="12" />
+                            <constraint firstItem="lab-047-id" firstAttribute="trailing" id="lab-054-id" secondItem="lab-002-id-safe" secondAttribute="trailing" constant="-16" />
+                            <constraint firstItem="lab-047-id" firstAttribute="width" id="lab-055-id" secondItem="lab-046-id" secondAttribute="width" />
+                            <constraint firstItem="lab-056-id" firstAttribute="leading" id="lab-058-id" secondItem="lab-002-id-safe" secondAttribute="leading" constant="16" />
+                            <constraint firstItem="lab-056-id" firstAttribute="trailing" id="lab-059-id" secondItem="lab-002-id-safe" secondAttribute="trailing" constant="-16" />
+                            <constraint firstItem="lab-057-id" firstAttribute="leading" id="lab-060-id" secondItem="lab-002-id-safe" secondAttribute="leading" constant="16" />
+                            <constraint firstItem="lab-057-id" firstAttribute="trailing" id="lab-061-id" secondItem="lab-002-id-safe" secondAttribute="trailing" constant="-16" />
+                            <constraint firstItem="lab-056-id" firstAttribute="top" id="lab-062-id" secondItem="lab-046-id" secondAttribute="bottom" constant="24" />
+                            <constraint firstItem="lab-057-id" firstAttribute="top" id="lab-063-id" secondItem="lab-056-id" secondAttribute="bottom" constant="8" />
+                            <constraint firstItem="lab-057-id" firstAttribute="bottom" id="lab-064-id" secondItem="lab-002-id-safe" secondAttribute="bottom" constant="-16" relation="lessThanOrEqual" />
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lab-001-id" sceneMemberID="firstResponder" />
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Avatar" width="640" height="640" />
+        <systemColor name="systemBackgroundColor">
+            <color red="1.0" green="1.0" blue="1.0" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.9490196078431372" green="0.9490196078431372" blue="0.9686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+    </resources>
+</document>

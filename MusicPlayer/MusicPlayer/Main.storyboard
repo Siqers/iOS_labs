@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="main">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player View Controller-->
+        <scene sceneID="lab-000-id">
+            <objects>
+                <viewController id="main" customClass="PlayerViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lab-002-id">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="lab-003-id">
+                                <rect key="frame" x="20" y="196.66666666666663" width="353" height="509"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Track01" translatesAutoresizingMaskIntoConstraints="NO" id="lab-007-id">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="353"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="lab-007-id" secondAttribute="width" id="lab-008-id"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lab-009-id">
+                                        <rect key="frame" x="0.0" y="375" width="353" height="60"/>
+                                        <subviews>
+                                            <label contentMode="scaleToFill" text="First Light" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="lab-010-id">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="34.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                            </label>
+                                            <label contentMode="scaleToFill" text="Quiet Frequencies" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="lab-011-id">
+                                                <rect key="frame" x="0.0" y="39.666666666666742" width="353" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lab-012-id">
+                                        <rect key="frame" x="0.0" y="457" width="353" height="52"/>
+                                        <subviews>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lab-014-id">
+                                                <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="52"/>
+                                                <accessibility key="accessibilityConfiguration" label="Previous"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="backward.fill" cornerStyle="medium">
+                                                    <color key="baseBackgroundColor" red="0.14117647058823529" green="0.36470588235294116" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="previous:" destination="main" eventType="touchUpInside" id="lab-015-id"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lab-016-id">
+                                                <rect key="frame" x="121.66666666666666" y="0.0" width="109.66666666666666" height="52"/>
+                                                <accessibility key="accessibilityConfiguration" label="Play"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="play.fill" cornerStyle="medium">
+                                                    <color key="baseBackgroundColor" red="0.14117647058823529" green="0.36470588235294116" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="togglePlayback:" destination="main" eventType="touchUpInside" id="lab-017-id"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lab-018-id">
+                                                <rect key="frame" x="243.33333333333329" y="0.0" width="109.66666666666666" height="52"/>
+                                                <accessibility key="accessibilityConfiguration" label="Next"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="forward.fill" cornerStyle="medium">
+                                                    <color key="baseBackgroundColor" red="0.14117647058823529" green="0.36470588235294116" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="next:" destination="main" eventType="touchUpInside" id="lab-019-id"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="lab-013-id"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lab-002-id-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lab-003-id" firstAttribute="leading" secondItem="lab-002-id-safe" secondAttribute="leading" constant="20" id="lab-004-id"/>
+                            <constraint firstItem="lab-003-id" firstAttribute="trailing" secondItem="lab-002-id-safe" secondAttribute="trailing" constant="-20" id="lab-005-id"/>
+                            <constraint firstItem="lab-003-id" firstAttribute="centerY" secondItem="lab-002-id-safe" secondAttribute="centerY" id="lab-006-id"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="artistLabel" destination="lab-011-id" id="lab-022-id"/>
+                        <outlet property="coverView" destination="lab-007-id" id="lab-020-id"/>
+                        <outlet property="playButton" destination="lab-016-id" id="lab-023-id"/>
+                        <outlet property="titleLabel" destination="lab-010-id" id="lab-021-id"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lab-001-id" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Track01" width="640" height="640"/>
+        <image name="backward.fill" width="128" height="128"/>
+        <image name="forward.fill" width="128" height="128"/>
+        <image name="play.fill" width="128" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

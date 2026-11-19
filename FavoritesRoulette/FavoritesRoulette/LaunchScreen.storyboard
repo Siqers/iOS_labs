@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24520" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="NO" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" launchScreen="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light" />
+    <dependencies>
+        <deployment identifier="iOS" />
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24516" />
+    </dependencies>
+    <scenes>
+        <scene sceneID="lab-000-id">
+            <objects>
+                <viewController id="main" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lab-002-id">
+                        <rect key="frame" x="0" y="0" width="393" height="852" />
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
+                        <subviews>
+                            <imageView id="lab-003-id" contentMode="scaleAspectFit" clipsSubviews="YES" userInteractionEnabled="NO" image="LaunchArt">
+                                <rect key="frame" x="132" y="365" width="129" height="122" />
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES" />
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lab-002-id-safe" />
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" />
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lab-001-id" sceneMemberID="firstResponder" />
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LaunchArt" width="640" height="640" />
+        <systemColor name="systemBackgroundColor">
+            <color red="1.0" green="1.0" blue="1.0" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.9490196078431372" green="0.9490196078431372" blue="0.9686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+        </systemColor>
+    </resources>
+</document>
